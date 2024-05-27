@@ -1,0 +1,17 @@
+学籍番号: __STUDENT_ID__
+氏名: __STUDENT_NAME__
+課題番号: 2
+
+演習に用いた環境: 自分の PC 及び COINS システムへの SSH 接続
+
+答:
+2-1. ls -a "$HOME"
+2-2. chmod 600 "$HOME/diary.txt"
+2-3. cp -r manual/ doc/
+2-4. ln -s default.bat ../initialize.bat
+2-5. cat LICENSE | grep "[Pp]atent" | wc -l >> num_patent_lines.txt
+2-6. diff -i tools.c util.c
+2-7. cat ../bigfile.txt | awk 9501<=NR && NR<=9600 > bigfile9501-9600.txt
+2-8. find -name util.py
+2-9. cat words.txt | sort | uniq -c | sort | tail -1
+2-10. last -d | head -5 | awk '{print $1,$3}'
