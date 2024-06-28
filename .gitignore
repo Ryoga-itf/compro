@@ -1,7 +1,9 @@
 .DS_Store
 .env
 .env.local
+*.out
 
 # 私の個人情報が含まれているので
 report*.txt
 !report*.raw.txt
+*.pdf
