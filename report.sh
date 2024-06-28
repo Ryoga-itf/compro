@@ -17,3 +17,7 @@ for file in $(find . -type f -name 'report*.raw.txt'); do
     sed -e "s/__STUDENT_NAME__/$STUDENT_NAME/g" -e "s/__STUDENT_ID__/$STUDENT_ID/g" -e "s/__STUDENT_UTID__/$STUDENT_UTID/g" $file \
       > $(echo $file | sed "s/.raw//")
 done
+
+for file in $(find . -type f -name 'report*.typ'); do
+    typst compile $file --root . --input STUDENT_NAME="$STUDENT_NAME" --input STUDENT_ID="$STUDENT_ID" --input STUDENT_UTID="$STUDENT_UTID"
+done
