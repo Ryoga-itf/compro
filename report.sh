@@ -18,6 +18,6 @@ for file in $(find . -type f -name 'report*.raw.txt'); do
       > $(echo $file | sed "s/.raw//")
 done
 
-for file in $(find . -type f -name 'report*.typ'); do
+for file in $(find . -type f -name '*.typ'); do
     typst compile $file --root . --input STUDENT_NAME="$STUDENT_NAME" --input STUDENT_ID="$STUDENT_ID" --input STUDENT_UTID="$STUDENT_UTID"
 done
