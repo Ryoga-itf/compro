@@ -17,7 +17,7 @@
   show heading: set text(font: fontSan, weight: "medium", lang: "ja")
   show heading.where(level: 1): it => {
     set text(size: 1.2em)
-    pad(top: 3em, bottom: 1em)[
+    pad(top: 2em, bottom: 1em)[
       #it
     ]
   }
