@@ -106,3 +106,37 @@
 #describe("0|10000001|10000000000000000000000")
 === 7.0
 #describe("0|10000001|11000000000000000000000")
+
+
+== 1111
+
+#let bin2int(bin) = {
+  if bin.len() == 0 {
+    return 0
+  }
+  return bin2int(bin.slice(0, count: bin.len() - 1)) * 2 + int(bin.last())
+}
+
+#let explain(n, repr) = {
+  let splitted = repr.split("|")
+  let (s, e, f) = splitted.map(v => bin2int(v))
+  let result = calc.pow(-1, s) * (1 + f / calc.pow(2, 23)) * calc.pow(2, e - 127)
+  assert(n == result)
+
+  [=== #n]
+  [ビット表現は #repr であり、この符号部、指数部、仮数部はそれぞれ、\
+  - $s = #splitted.at(0) _((2)) = #s$ \
+  - $e = #splitted.at(1) _((2)) = #e$ \
+  - $f = #splitted.at(2) _((2)) = #f$ \
+  である。よってこれは
+  $(-1)^#s times (1+#f times 2^(-23)) times 2^(#e - 127) = #result$ \
+  であり、確かに #n を表している。]
+}
+
+#explain(1, "0|01111111|00000000000000000000000")
+#explain(2, "0|10000000|00000000000000000000000")
+#explain(3, "0|10000000|10000000000000000000000")
+#explain(4, "0|10000001|00000000000000000000000")
+#explain(5, "0|10000001|01000000000000000000000")
+#explain(6, "0|10000001|10000000000000000000000")
+#explain(7, "0|10000001|11000000000000000000000")
