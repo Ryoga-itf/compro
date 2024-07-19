@@ -1,0 +1,32 @@
+I
+have
+a
+pen
+I
+have
+an
+apple
+"Apple pen!"
+I
+have
+a
+pen
+I
+have
+a
+pineapple
+"Pineapple pen!"
+Applepen
+pineapplepen
+"Pen Pineapple Apple Pen!"
+"Pen Pineapple Apple Pen!"
+
+====================
+
+I have a pen, I have an apple... "Apple pen!"
+I have a pen, I have a pineapple... "Pineapple pen!"
+Applepen...pineapplepen..."Pen Pineapple Apple Pen!"
+
+
+"Pen Pineapple Apple Pen!"
+
