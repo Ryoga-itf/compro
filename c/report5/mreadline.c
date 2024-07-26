@@ -55,7 +55,6 @@ int main(int argc, char **argv) {
   while (1) {
     line = mreadline(stdin);
     if (line == NULL) {
-      free(line);
       break;
     }
     puts(line);
