@@ -44,10 +44,10 @@
 
 本課題は課題 1 で作成したプログラムに対してプリプロセッサで処理をし、`printf` に関連する内容を見つけ、そこから読み取れることを説明するというものである。
 
-以下に示す手順を用いてプリプロセッサで処理を行い、結果として `hello_preprocessed.c` ファイルを得た。
+以下に示す手順を用いてプリプロセッサで処理を行い、結果として `hello.preprocessed.c` ファイルを得た。
 
 #sourcecode[```
-  $ cpp hello.c -o hello_preprocessed.c
+  $ cpp hello.c -o hello.preprocessed.c
 ```]
 
 `printf` に関連する内容として以下の行が見つかった。
